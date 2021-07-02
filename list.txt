@@ -1,0 +1,593 @@
+flightsurety@1.0.0 C:\_Dev\Crypto\FlightSurety
++-- openzeppelin-solidity@2.3.0
+`-- truffle-hdwallet-provider@1.0.17
+  +-- any-promise@1.3.0
+  +-- bindings@1.5.0
+  | `-- file-uri-to-path@1.0.0
+  +-- web3@1.2.1
+  | +-- web3-bzz@1.2.1
+  | | +-- got@9.6.0
+  | | | +-- @sindresorhus/is@0.14.0
+  | | | +-- @szmarczak/http-timer@1.1.2
+  | | | | `-- defer-to-connect@1.1.3
+  | | | +-- cacheable-request@6.1.0
+  | | | | +-- clone-response@1.0.2
+  | | | | | `-- mimic-response@1.0.1 deduped
+  | | | | +-- get-stream@5.2.0
+  | | | | | `-- pump@3.0.0 deduped
+  | | | | +-- http-cache-semantics@4.1.0
+  | | | | +-- keyv@3.1.0
+  | | | | | `-- json-buffer@3.0.0
+  | | | | +-- lowercase-keys@2.0.0
+  | | | | +-- normalize-url@4.5.1
+  | | | | `-- responselike@1.0.2
+  | | | |   `-- lowercase-keys@1.0.1 deduped
+  | | | +-- decompress-response@3.3.0
+  | | | | `-- mimic-response@1.0.1 deduped
+  | | | +-- duplexer3@0.1.4
+  | | | +-- get-stream@4.1.0
+  | | | | `-- pump@3.0.0
+  | | | |   +-- end-of-stream@1.4.4
+  | | | |   | `-- once@1.4.0 deduped
+  | | | |   `-- once@1.4.0
+  | | | |     `-- wrappy@1.0.2
+  | | | +-- lowercase-keys@1.0.1
+  | | | +-- mimic-response@1.0.1
+  | | | +-- p-cancelable@1.1.0
+  | | | +-- to-readable-stream@1.0.0
+  | | | `-- url-parse-lax@3.0.0
+  | | |   `-- prepend-http@2.0.0
+  | | +-- swarm-js@0.1.39
+  | | | +-- bluebird@3.7.2
+  | | | +-- buffer@5.7.1
+  | | | | +-- base64-js@1.5.1
+  | | | | `-- ieee754@1.2.1
+  | | | +-- decompress@4.2.1
+  | | | | +-- decompress-tar@4.1.1
+  | | | | | +-- file-type@5.2.0
+  | | | | | +-- is-stream@1.1.0 deduped
+  | | | | | `-- tar-stream@1.6.2
+  | | | | |   +-- bl@1.2.3
+  | | | | |   | +-- readable-stream@2.3.7 deduped
+  | | | | |   | `-- safe-buffer@5.2.1 deduped
+  | | | | |   +-- buffer-alloc@1.2.0
+  | | | | |   | +-- buffer-alloc-unsafe@1.1.0
+  | | | | |   | `-- buffer-fill@1.0.0
+  | | | | |   +-- end-of-stream@1.4.4 deduped
+  | | | | |   +-- fs-constants@1.0.0
+  | | | | |   +-- readable-stream@2.3.7
+  | | | | |   | +-- core-util-is@1.0.2
+  | | | | |   | +-- inherits@2.0.4 deduped
+  | | | | |   | +-- isarray@1.0.0
+  | | | | |   | +-- process-nextick-args@2.0.1
+  | | | | |   | +-- safe-buffer@5.1.2
+  | | | | |   | +-- string_decoder@1.1.1 deduped
+  | | | | |   | `-- util-deprecate@1.0.2 deduped
+  | | | | |   +-- to-buffer@1.1.1
+  | | | | |   `-- xtend@4.0.2
+  | | | | +-- decompress-tarbz2@4.1.1
+  | | | | | +-- decompress-tar@4.1.1 deduped
+  | | | | | +-- file-type@6.2.0
+  | | | | | +-- is-stream@1.1.0 deduped
+  | | | | | +-- seek-bzip@1.0.6
+  | | | | | | `-- commander@2.20.3
+  | | | | | `-- unbzip2-stream@1.4.3
+  | | | | |   +-- buffer@5.7.1 deduped
+  | | | | |   `-- through@2.3.8
+  | | | | +-- decompress-targz@4.1.1
+  | | | | | +-- decompress-tar@4.1.1 deduped
+  | | | | | +-- file-type@5.2.0 deduped
+  | | | | | `-- is-stream@1.1.0 deduped
+  | | | | +-- decompress-unzip@4.0.1
+  | | | | | +-- file-type@3.9.0
+  | | | | | +-- get-stream@2.3.1
+  | | | | | | +-- object-assign@4.1.1 deduped
+  | | | | | | `-- pinkie-promise@2.0.1
+  | | | | | |   `-- pinkie@2.0.4
+  | | | | | +-- pify@2.3.0 deduped
+  | | | | | `-- yauzl@2.10.0
+  | | | | |   +-- buffer-crc32@0.2.13
+  | | | | |   `-- fd-slicer@1.1.0
+  | | | | |     `-- pend@1.2.0
+  | | | | +-- graceful-fs@4.2.6
+  | | | | +-- make-dir@1.3.0
+  | | | | | `-- pify@3.0.0
+  | | | | +-- pify@2.3.0
+  | | | | `-- strip-dirs@2.1.0
+  | | | |   `-- is-natural-number@4.0.1
+  | | | +-- eth-lib@0.1.29
+  | | | | +-- bn.js@4.12.0
+  | | | | +-- elliptic@6.5.4 deduped
+  | | | | +-- nano-json-stream-parser@0.1.2
+  | | | | +-- servify@0.1.12
+  | | | | | +-- body-parser@1.19.0
+  | | | | | | +-- bytes@3.1.0
+  | | | | | | +-- content-type@1.0.4
+  | | | | | | +-- debug@2.6.9 deduped
+  | | | | | | +-- depd@1.1.2
+  | | | | | | +-- http-errors@1.7.2
+  | | | | | | | +-- depd@1.1.2 deduped
+  | | | | | | | +-- inherits@2.0.3
+  | | | | | | | +-- setprototypeof@1.1.1 deduped
+  | | | | | | | +-- statuses@1.5.0 deduped
+  | | | | | | | `-- toidentifier@1.0.0
+  | | | | | | +-- iconv-lite@0.4.24
+  | | | | | | | `-- safer-buffer@2.1.2
+  | | | | | | +-- on-finished@2.3.0
+  | | | | | | | `-- ee-first@1.1.1
+  | | | | | | +-- qs@6.7.0
+  | | | | | | +-- raw-body@2.4.0
+  | | | | | | | +-- bytes@3.1.0 deduped
+  | | | | | | | +-- http-errors@1.7.2 deduped
+  | | | | | | | +-- iconv-lite@0.4.24 deduped
+  | | | | | | | `-- unpipe@1.0.0
+  | | | | | | `-- type-is@1.6.18
+  | | | | | |   +-- media-typer@0.3.0
+  | | | | | |   `-- mime-types@2.1.31 deduped
+  | | | | | +-- cors@2.8.5
+  | | | | | | +-- object-assign@4.1.1 deduped
+  | | | | | | `-- vary@1.1.2
+  | | | | | +-- express@4.17.1
+  | | | | | | +-- accepts@1.3.7
+  | | | | | | | +-- mime-types@2.1.31 deduped
+  | | | | | | | `-- negotiator@0.6.2
+  | | | | | | +-- array-flatten@1.1.1
+  | | | | | | +-- body-parser@1.19.0 deduped
+  | | | | | | +-- content-disposition@0.5.3
+  | | | | | | | `-- safe-buffer@5.1.2
+  | | | | | | +-- content-type@1.0.4 deduped
+  | | | | | | +-- cookie@0.4.0
+  | | | | | | +-- cookie-signature@1.0.6
+  | | | | | | +-- debug@2.6.9 deduped
+  | | | | | | +-- depd@1.1.2 deduped
+  | | | | | | +-- encodeurl@1.0.2
+  | | | | | | +-- escape-html@1.0.3
+  | | | | | | +-- etag@1.8.1
+  | | | | | | +-- finalhandler@1.1.2
+  | | | | | | | +-- debug@2.6.9 deduped
+  | | | | | | | +-- encodeurl@1.0.2 deduped
+  | | | | | | | +-- escape-html@1.0.3 deduped
+  | | | | | | | +-- on-finished@2.3.0 deduped
+  | | | | | | | +-- parseurl@1.3.3 deduped
+  | | | | | | | +-- statuses@1.5.0 deduped
+  | | | | | | | `-- unpipe@1.0.0 deduped
+  | | | | | | +-- fresh@0.5.2
+  | | | | | | +-- merge-descriptors@1.0.1
+  | | | | | | +-- methods@1.1.2
+  | | | | | | +-- on-finished@2.3.0 deduped
+  | | | | | | +-- parseurl@1.3.3
+  | | | | | | +-- path-to-regexp@0.1.7
+  | | | | | | +-- proxy-addr@2.0.7
+  | | | | | | | +-- forwarded@0.2.0
+  | | | | | | | `-- ipaddr.js@1.9.1
+  | | | | | | +-- qs@6.7.0 deduped
+  | | | | | | +-- range-parser@1.2.1
+  | | | | | | +-- safe-buffer@5.1.2
+  | | | | | | +-- send@0.17.1
+  | | | | | | | +-- debug@2.6.9 deduped
+  | | | | | | | +-- depd@1.1.2 deduped
+  | | | | | | | +-- destroy@1.0.4
+  | | | | | | | +-- encodeurl@1.0.2 deduped
+  | | | | | | | +-- escape-html@1.0.3 deduped
+  | | | | | | | +-- etag@1.8.1 deduped
+  | | | | | | | +-- fresh@0.5.2 deduped
+  | | | | | | | +-- http-errors@1.7.2 deduped
+  | | | | | | | +-- mime@1.6.0
+  | | | | | | | +-- ms@2.1.1
+  | | | | | | | +-- on-finished@2.3.0 deduped
+  | | | | | | | +-- range-parser@1.2.1 deduped
+  | | | | | | | `-- statuses@1.5.0 deduped
+  | | | | | | +-- serve-static@1.14.1
+  | | | | | | | +-- encodeurl@1.0.2 deduped
+  | | | | | | | +-- escape-html@1.0.3 deduped
+  | | | | | | | +-- parseurl@1.3.3 deduped
+  | | | | | | | `-- send@0.17.1 deduped
+  | | | | | | +-- setprototypeof@1.1.1
+  | | | | | | +-- statuses@1.5.0
+  | | | | | | +-- type-is@1.6.18 deduped
+  | | | | | | +-- utils-merge@1.0.1
+  | | | | | | `-- vary@1.1.2 deduped
+  | | | | | +-- request@2.88.2
+  | | | | | | +-- aws-sign2@0.7.0
+  | | | | | | +-- aws4@1.11.0
+  | | | | | | +-- caseless@0.12.0
+  | | | | | | +-- combined-stream@1.0.8
+  | | | | | | | `-- delayed-stream@1.0.0
+  | | | | | | +-- extend@3.0.2
+  | | | | | | +-- forever-agent@0.6.1
+  | | | | | | +-- form-data@2.3.3
+  | | | | | | | +-- asynckit@0.4.0
+  | | | | | | | +-- combined-stream@1.0.8 deduped
+  | | | | | | | `-- mime-types@2.1.31 deduped
+  | | | | | | +-- har-validator@5.1.5
+  | | | | | | | +-- ajv@6.12.6
+  | | | | | | | | +-- fast-deep-equal@3.1.3
+  | | | | | | | | +-- fast-json-stable-stringify@2.1.0
+  | | | | | | | | +-- json-schema-traverse@0.4.1
+  | | | | | | | | `-- uri-js@4.4.1
+  | | | | | | | |   `-- punycode@2.1.1 deduped
+  | | | | | | | `-- har-schema@2.0.0
+  | | | | | | +-- http-signature@1.2.0
+  | | | | | | | +-- assert-plus@1.0.0
+  | | | | | | | +-- jsprim@1.4.1
+  | | | | | | | | +-- assert-plus@1.0.0 deduped
+  | | | | | | | | +-- extsprintf@1.3.0
+  | | | | | | | | +-- json-schema@0.2.3
+  | | | | | | | | `-- verror@1.10.0
+  | | | | | | | |   +-- assert-plus@1.0.0 deduped
+  | | | | | | | |   +-- core-util-is@1.0.2 deduped
+  | | | | | | | |   `-- extsprintf@1.3.0 deduped
+  | | | | | | | `-- sshpk@1.16.1
+  | | | | | | |   +-- asn1@0.2.4
+  | | | | | | |   | `-- safer-buffer@2.1.2 deduped
+  | | | | | | |   +-- assert-plus@1.0.0 deduped
+  | | | | | | |   +-- bcrypt-pbkdf@1.0.2
+  | | | | | | |   | `-- tweetnacl@0.14.5 deduped
+  | | | | | | |   +-- dashdash@1.14.1
+  | | | | | | |   | `-- assert-plus@1.0.0 deduped
+  | | | | | | |   +-- ecc-jsbn@0.1.2
+  | | | | | | |   | +-- jsbn@0.1.1 deduped
+  | | | | | | |   | `-- safer-buffer@2.1.2 deduped
+  | | | | | | |   +-- getpass@0.1.7
+  | | | | | | |   | `-- assert-plus@1.0.0 deduped
+  | | | | | | |   +-- jsbn@0.1.1
+  | | | | | | |   +-- safer-buffer@2.1.2 deduped
+  | | | | | | |   `-- tweetnacl@0.14.5
+  | | | | | | +-- is-typedarray@1.0.0 deduped
+  | | | | | | +-- isstream@0.1.2
+  | | | | | | +-- json-stringify-safe@5.0.1
+  | | | | | | +-- mime-types@2.1.31 deduped
+  | | | | | | +-- oauth-sign@0.9.0
+  | | | | | | +-- performance-now@2.1.0
+  | | | | | | +-- qs@6.5.2
+  | | | | | | +-- safe-buffer@5.2.1 deduped
+  | | | | | | +-- tough-cookie@2.5.0
+  | | | | | | | +-- psl@1.8.0
+  | | | | | | | `-- punycode@2.1.1
+  | | | | | | +-- tunnel-agent@0.6.0
+  | | | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | | | `-- uuid@3.4.0
+  | | | | | `-- xhr@2.6.0
+  | | | | |   +-- global@4.4.0
+  | | | | |   | +-- min-document@2.19.0
+  | | | | |   | | `-- dom-walk@0.1.2
+  | | | | |   | `-- process@0.11.10
+  | | | | |   +-- is-function@1.0.2
+  | | | | |   +-- parse-headers@2.0.3
+  | | | | |   `-- xtend@4.0.2 deduped
+  | | | | +-- ws@3.3.3
+  | | | | | +-- async-limiter@1.0.1
+  | | | | | +-- safe-buffer@5.1.2
+  | | | | | `-- ultron@1.1.1
+  | | | | `-- xhr-request-promise@0.1.3 deduped
+  | | | +-- fs-extra@4.0.3
+  | | | | +-- graceful-fs@4.2.6 deduped
+  | | | | +-- jsonfile@4.0.0
+  | | | | | `-- graceful-fs@4.2.6 deduped
+  | | | | `-- universalify@0.1.2
+  | | | +-- got@7.1.0
+  | | | | +-- decompress-response@3.3.0 deduped
+  | | | | +-- duplexer3@0.1.4 deduped
+  | | | | +-- get-stream@3.0.0
+  | | | | +-- is-plain-obj@1.1.0
+  | | | | +-- is-retry-allowed@1.2.0
+  | | | | +-- is-stream@1.1.0
+  | | | | +-- isurl@1.0.0
+  | | | | | +-- has-to-string-tag-x@1.4.1
+  | | | | | | `-- has-symbol-support-x@1.4.2
+  | | | | | `-- is-object@1.0.2
+  | | | | +-- lowercase-keys@1.0.1 deduped
+  | | | | +-- p-cancelable@0.3.0
+  | | | | +-- p-timeout@1.2.1
+  | | | | | `-- p-finally@1.0.0
+  | | | | +-- safe-buffer@5.2.1
+  | | | | +-- timed-out@4.0.1
+  | | | | +-- url-parse-lax@1.0.0
+  | | | | | `-- prepend-http@1.0.4
+  | | | | `-- url-to-options@1.0.1
+  | | | +-- mime-types@2.1.31
+  | | | | `-- mime-db@1.48.0
+  | | | +-- mkdirp-promise@5.0.1
+  | | | | `-- mkdirp@1.0.4
+  | | | +-- mock-fs@4.14.0
+  | | | +-- setimmediate@1.0.5
+  | | | +-- tar@4.4.13
+  | | | | +-- chownr@1.1.4
+  | | | | +-- fs-minipass@1.2.7
+  | | | | | `-- minipass@2.9.0 deduped
+  | | | | +-- minipass@2.9.0
+  | | | | | +-- safe-buffer@5.2.1 deduped
+  | | | | | `-- yallist@3.1.1 deduped
+  | | | | +-- minizlib@1.3.3
+  | | | | | `-- minipass@2.9.0 deduped
+  | | | | +-- mkdirp@0.5.5
+  | | | | | `-- minimist@1.2.5
+  | | | | +-- safe-buffer@5.2.1 deduped
+  | | | | `-- yallist@3.1.1
+  | | | `-- xhr-request-promise@0.1.3
+  | | |   `-- xhr-request@1.1.0
+  | | |     +-- buffer-to-arraybuffer@0.0.5
+  | | |     +-- object-assign@4.1.1
+  | | |     +-- query-string@5.1.1
+  | | |     | +-- decode-uri-component@0.2.0
+  | | |     | +-- object-assign@4.1.1 deduped
+  | | |     | `-- strict-uri-encode@1.1.0
+  | | |     +-- simple-get@2.8.1
+  | | |     | +-- decompress-response@3.3.0 deduped
+  | | |     | +-- once@1.4.0 deduped
+  | | |     | `-- simple-concat@1.0.1
+  | | |     +-- timed-out@4.0.1 deduped
+  | | |     +-- url-set-query@1.0.0
+  | | |     `-- xhr@2.6.0 deduped
+  | | `-- underscore@1.9.1
+  | +-- web3-core@1.2.1
+  | | +-- web3-core-helpers@1.2.1
+  | | | +-- underscore@1.9.1 deduped
+  | | | +-- web3-eth-iban@1.2.1 deduped
+  | | | `-- web3-utils@1.2.1 deduped
+  | | +-- web3-core-method@1.2.1
+  | | | +-- underscore@1.9.1 deduped
+  | | | +-- web3-core-helpers@1.2.1 deduped
+  | | | +-- web3-core-promievent@1.2.1
+  | | | | +-- any-promise@1.3.0 deduped
+  | | | | `-- eventemitter3@3.1.2 deduped
+  | | | +-- web3-core-subscriptions@1.2.1 deduped
+  | | | `-- web3-utils@1.2.1 deduped
+  | | +-- web3-core-requestmanager@1.2.1
+  | | | +-- underscore@1.9.1 deduped
+  | | | +-- web3-core-helpers@1.2.1 deduped
+  | | | +-- web3-providers-http@1.2.1
+  | | | | +-- web3-core-helpers@1.2.1 deduped
+  | | | | `-- xhr2-cookies@1.1.0
+  | | | |   `-- cookiejar@2.1.2
+  | | | +-- web3-providers-ipc@1.2.1
+  | | | | +-- oboe@2.1.4
+  | | | | | `-- http-https@1.0.0
+  | | | | +-- underscore@1.9.1 deduped
+  | | | | `-- web3-core-helpers@1.2.1 deduped
+  | | | `-- web3-providers-ws@1.2.1
+  | | |   +-- underscore@1.9.1 deduped
+  | | |   +-- web3-core-helpers@1.2.1 deduped
+  | | |   `-- websocket@1.0.29 (github:web3-js/WebSocket-Node#ef5ea2f41daf4a2113b80c9223df884b4d56c400)
+  | | |     +-- debug@2.6.9 deduped
+  | | |     +-- es5-ext@0.10.53 deduped
+  | | |     +-- nan@2.14.2
+  | | |     +-- typedarray-to-buffer@3.1.5 deduped
+  | | |     `-- yaeti@0.0.6 deduped
+  | | `-- web3-utils@1.2.1 deduped
+  | +-- web3-eth@1.2.1
+  | | +-- underscore@1.9.1 deduped
+  | | +-- web3-core@1.2.1 deduped
+  | | +-- web3-core-helpers@1.2.1 deduped
+  | | +-- web3-core-method@1.2.1 deduped
+  | | +-- web3-core-subscriptions@1.2.1
+  | | | +-- eventemitter3@3.1.2
+  | | | +-- underscore@1.9.1 deduped
+  | | | `-- web3-core-helpers@1.2.1 deduped
+  | | +-- web3-eth-abi@1.2.1
+  | | | +-- ethers@4.0.0-beta.3
+  | | | | +-- @types/node@10.17.60
+  | | | | +-- aes-js@3.0.0
+  | | | | +-- bn.js@4.12.0 deduped
+  | | | | +-- elliptic@6.3.3
+  | | | | | +-- bn.js@4.12.0 deduped
+  | | | | | +-- brorand@1.1.0 deduped
+  | | | | | +-- hash.js@1.1.3 deduped
+  | | | | | `-- inherits@2.0.4 deduped
+  | | | | +-- hash.js@1.1.3
+  | | | | | +-- inherits@2.0.4 deduped
+  | | | | | `-- minimalistic-assert@1.0.1 deduped
+  | | | | +-- js-sha3@0.5.7
+  | | | | +-- scrypt-js@2.0.3
+  | | | | +-- setimmediate@1.0.4
+  | | | | +-- uuid@2.0.1
+  | | | | `-- xmlhttprequest@1.8.0
+  | | | +-- underscore@1.9.1 deduped
+  | | | `-- web3-utils@1.2.1 deduped
+  | | +-- web3-eth-accounts@1.2.1
+  | | | +-- any-promise@1.3.0 deduped
+  | | | +-- crypto-browserify@3.12.0
+  | | | | +-- browserify-cipher@1.0.1
+  | | | | | +-- browserify-aes@1.2.0
+  | | | | | | +-- buffer-xor@1.0.3
+  | | | | | | +-- cipher-base@1.0.4 deduped
+  | | | | | | +-- create-hash@1.2.0 deduped
+  | | | | | | +-- evp_bytestokey@1.0.3 deduped
+  | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | | +-- browserify-des@1.0.2
+  | | | | | | +-- cipher-base@1.0.4 deduped
+  | | | | | | +-- des.js@1.0.1
+  | | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | | `-- minimalistic-assert@1.0.1 deduped
+  | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | | `-- evp_bytestokey@1.0.3
+  | | | | |   +-- md5.js@1.3.5 deduped
+  | | | | |   `-- safe-buffer@5.2.1 deduped
+  | | | | +-- browserify-sign@4.2.1
+  | | | | | +-- bn.js@5.2.0
+  | | | | | +-- browserify-rsa@4.1.0
+  | | | | | | +-- bn.js@5.2.0
+  | | | | | | `-- randombytes@2.1.0 deduped
+  | | | | | +-- create-hash@1.2.0 deduped
+  | | | | | +-- create-hmac@1.1.7 deduped
+  | | | | | +-- elliptic@6.5.4 deduped
+  | | | | | +-- inherits@2.0.4 deduped
+  | | | | | +-- parse-asn1@5.1.6
+  | | | | | | +-- asn1.js@5.4.1
+  | | | | | | | +-- bn.js@4.12.0 deduped
+  | | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | | +-- minimalistic-assert@1.0.1 deduped
+  | | | | | | | `-- safer-buffer@2.1.2 deduped
+  | | | | | | +-- browserify-aes@1.2.0 deduped
+  | | | | | | +-- evp_bytestokey@1.0.3 deduped
+  | | | | | | +-- pbkdf2@3.1.2 deduped
+  | | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | | +-- readable-stream@3.6.0
+  | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | +-- string_decoder@1.1.1
+  | | | | | | | `-- safe-buffer@5.1.2
+  | | | | | | `-- util-deprecate@1.0.2
+  | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | +-- create-ecdh@4.0.4
+  | | | | | +-- bn.js@4.12.0 deduped
+  | | | | | `-- elliptic@6.5.4 deduped
+  | | | | +-- create-hash@1.2.0
+  | | | | | +-- cipher-base@1.0.4
+  | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | | +-- inherits@2.0.4 deduped
+  | | | | | +-- md5.js@1.3.5
+  | | | | | | +-- hash-base@3.1.0
+  | | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | | +-- readable-stream@3.6.0
+  | | | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | | | +-- string_decoder@1.1.1 deduped
+  | | | | | | | | `-- util-deprecate@1.0.2 deduped
+  | | | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | | | +-- inherits@2.0.4 deduped
+  | | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | | +-- ripemd160@2.0.2
+  | | | | | | +-- hash-base@3.1.0 deduped
+  | | | | | | `-- inherits@2.0.4 deduped
+  | | | | | `-- sha.js@2.4.11
+  | | | | |   +-- inherits@2.0.4 deduped
+  | | | | |   `-- safe-buffer@5.2.1 deduped
+  | | | | +-- create-hmac@1.1.7
+  | | | | | +-- cipher-base@1.0.4 deduped
+  | | | | | +-- create-hash@1.2.0 deduped
+  | | | | | +-- inherits@2.0.4 deduped
+  | | | | | +-- ripemd160@2.0.2 deduped
+  | | | | | +-- safe-buffer@5.2.1 deduped
+  | | | | | `-- sha.js@2.4.11 deduped
+  | | | | +-- diffie-hellman@5.0.3
+  | | | | | +-- bn.js@4.12.0 deduped
+  | | | | | +-- miller-rabin@4.0.1
+  | | | | | | +-- bn.js@4.12.0 deduped
+  | | | | | | `-- brorand@1.1.0 deduped
+  | | | | | `-- randombytes@2.1.0 deduped
+  | | | | +-- inherits@2.0.4
+  | | | | +-- pbkdf2@3.1.2
+  | | | | | +-- create-hash@1.2.0 deduped
+  | | | | | +-- create-hmac@1.1.7 deduped
+  | | | | | +-- ripemd160@2.0.2 deduped
+  | | | | | +-- safe-buffer@5.2.1 deduped
+  | | | | | `-- sha.js@2.4.11 deduped
+  | | | | +-- public-encrypt@4.0.3
+  | | | | | +-- bn.js@4.12.0 deduped
+  | | | | | +-- browserify-rsa@4.1.0 deduped
+  | | | | | +-- create-hash@1.2.0 deduped
+  | | | | | +-- parse-asn1@5.1.6 deduped
+  | | | | | +-- randombytes@2.1.0 deduped
+  | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | +-- randombytes@2.1.0
+  | | | | | `-- safe-buffer@5.2.1 deduped
+  | | | | `-- randomfill@1.0.4
+  | | | |   +-- randombytes@2.1.0 deduped
+  | | | |   `-- safe-buffer@5.2.1 deduped
+  | | | +-- eth-lib@0.2.7
+  | | | | +-- bn.js@4.12.0 deduped
+  | | | | +-- elliptic@6.5.4 deduped
+  | | | | `-- xhr-request-promise@0.1.3 deduped
+  | | | +-- scryptsy@2.1.0
+  | | | +-- semver@6.2.0
+  | | | +-- underscore@1.9.1 deduped
+  | | | +-- uuid@3.3.2
+  | | | +-- web3-core@1.2.1 deduped
+  | | | +-- web3-core-helpers@1.2.1 deduped
+  | | | +-- web3-core-method@1.2.1 deduped
+  | | | `-- web3-utils@1.2.1 deduped
+  | | +-- web3-eth-contract@1.2.1
+  | | | +-- underscore@1.9.1 deduped
+  | | | +-- web3-core@1.2.1 deduped
+  | | | +-- web3-core-helpers@1.2.1 deduped
+  | | | +-- web3-core-method@1.2.1 deduped
+  | | | +-- web3-core-promievent@1.2.1 deduped
+  | | | +-- web3-core-subscriptions@1.2.1 deduped
+  | | | +-- web3-eth-abi@1.2.1 deduped
+  | | | `-- web3-utils@1.2.1 deduped
+  | | +-- web3-eth-ens@1.2.1
+  | | | +-- eth-ens-namehash@2.0.8
+  | | | | +-- idna-uts46-hx@2.3.1
+  | | | | | `-- punycode@2.1.0
+  | | | | `-- js-sha3@0.5.7 deduped
+  | | | +-- underscore@1.9.1 deduped
+  | | | +-- web3-core@1.2.1 deduped
+  | | | +-- web3-core-helpers@1.2.1 deduped
+  | | | +-- web3-core-promievent@1.2.1 deduped
+  | | | +-- web3-eth-abi@1.2.1 deduped
+  | | | +-- web3-eth-contract@1.2.1 deduped
+  | | | `-- web3-utils@1.2.1 deduped
+  | | +-- web3-eth-iban@1.2.1
+  | | | +-- bn.js@4.11.8
+  | | | `-- web3-utils@1.2.1 deduped
+  | | +-- web3-eth-personal@1.2.1 deduped
+  | | +-- web3-net@1.2.1 deduped
+  | | `-- web3-utils@1.2.1 deduped
+  | +-- web3-eth-personal@1.2.1
+  | | +-- web3-core@1.2.1 deduped
+  | | +-- web3-core-helpers@1.2.1 deduped
+  | | +-- web3-core-method@1.2.1 deduped
+  | | +-- web3-net@1.2.1 deduped
+  | | `-- web3-utils@1.2.1 deduped
+  | +-- web3-net@1.2.1
+  | | +-- web3-core@1.2.1 deduped
+  | | +-- web3-core-method@1.2.1 deduped
+  | | `-- web3-utils@1.2.1 deduped
+  | +-- web3-shh@1.2.1
+  | | +-- web3-core@1.2.1 deduped
+  | | +-- web3-core-method@1.2.1 deduped
+  | | +-- web3-core-subscriptions@1.2.1 deduped
+  | | `-- web3-net@1.2.1 deduped
+  | `-- web3-utils@1.2.1
+  |   +-- bn.js@4.11.8
+  |   +-- eth-lib@0.2.7
+  |   | +-- bn.js@4.11.8 deduped
+  |   | +-- elliptic@6.5.4
+  |   | | +-- bn.js@4.12.0 deduped
+  |   | | +-- brorand@1.1.0
+  |   | | +-- hash.js@1.1.7
+  |   | | | +-- inherits@2.0.4 deduped
+  |   | | | `-- minimalistic-assert@1.0.1 deduped
+  |   | | +-- hmac-drbg@1.0.1
+  |   | | | +-- hash.js@1.1.7 deduped
+  |   | | | +-- minimalistic-assert@1.0.1 deduped
+  |   | | | `-- minimalistic-crypto-utils@1.0.1 deduped
+  |   | | +-- inherits@2.0.4 deduped
+  |   | | +-- minimalistic-assert@1.0.1
+  |   | | `-- minimalistic-crypto-utils@1.0.1
+  |   | `-- xhr-request-promise@0.1.3 deduped
+  |   +-- ethjs-unit@0.1.6
+  |   | +-- bn.js@4.11.6
+  |   | `-- number-to-bn@1.7.0 deduped
+  |   +-- number-to-bn@1.7.0
+  |   | +-- bn.js@4.11.6
+  |   | `-- strip-hex-prefix@1.0.0
+  |   |   `-- is-hex-prefixed@1.0.0
+  |   +-- randomhex@0.1.5
+  |   +-- underscore@1.9.1 deduped
+  |   `-- utf8@3.0.0
+  `-- websocket@1.0.34
+    +-- bufferutil@4.0.3
+    | `-- node-gyp-build@4.2.3
+    +-- debug@2.6.9
+    | `-- ms@2.0.0
+    +-- es5-ext@0.10.53
+    | +-- es6-iterator@2.0.3
+    | | +-- d@1.0.1
+    | | | +-- es5-ext@0.10.53 deduped
+    | | | `-- type@1.2.0
+    | | +-- es5-ext@0.10.53 deduped
+    | | `-- es6-symbol@3.1.3 deduped
+    | +-- es6-symbol@3.1.3
+    | | +-- d@1.0.1 deduped
+    | | `-- ext@1.4.0
+    | |   `-- type@2.5.0
+    | `-- next-tick@1.0.0
+    +-- typedarray-to-buffer@3.1.5
+    | `-- is-typedarray@1.0.0
+    +-- utf-8-validate@5.0.5
+    | `-- node-gyp-build@4.2.3 deduped
+    `-- yaeti@0.0.6
+
