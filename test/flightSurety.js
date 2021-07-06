@@ -1,4 +1,3 @@
-  
 const Test = require('../config/testConfig.js');
 const truffleAssert = require('truffle-assertions');
 const BigNumber = require('../bignumber.js');
@@ -22,7 +21,6 @@ contract('Flight Surety Tests', async (acc) => {
     thirdAirline = accounts[2];
     fourthAirline = accounts[3];
     fifthAirline = accounts[4];
-
     passenger = accounts[5];
 });
 
@@ -60,7 +58,6 @@ it('Airlines can apply for registration', async function () {
     await config.flightSuretyApp.applyForAirlineRegistration("Third Airline", { from: thirdAirline });
     await config.flightSuretyApp.applyForAirlineRegistration("Fourth Airline", { from: fourthAirline });
     await config.flightSuretyApp.applyForAirlineRegistration("Fifth Airline", { from: fifthAirline });
-
     await config.flightSuretyApp.applyForAirlineRegistration("Fifth Airline", { from: accounts[5] });
 
     const appliedState = 0;
@@ -108,13 +105,10 @@ it('Registered airlines can pay dues', async function () {
 
     const balance = await web3.eth.getBalance(config.flightSuretyData.address);
     const balanceEther = web3.utils.fromWei(balance, 'ether');
-
     assert.equal(balanceEther, 30, "Balance wasn't transferred");
-});
+});6711
 
 it('Multiparty consensus required to approve fifth airline', async function () {
-    // Note: Based on 4 paid airlines
-
     // First approval should fail
     try {
         await config.flightSuretyApp.approveAirlineRegistration(fifthAirline, { from: firstAirline });
@@ -132,12 +126,6 @@ it('Multiparty consensus required to approve fifth airline', async function () {
 
 
 /****************************************************************************************/
-/* Flights                                                                              */
-/****************************************************************************************/
-
-
-
-/****************************************************************************************/
 /* Passenger Insurance                                                                  */
 /****************************************************************************************/
 
@@ -145,19 +133,13 @@ it('Passenger can buy insurance for flight', async function () {
 
     const flight1 = await config.flightSuretyApp.getFlight(0);
     const amount = await config.flightSuretyApp.MAX_INSURANCE_AMOUNT.call();
-
     const INSURANCE_DIVIDER = await config.flightSuretyApp.INSURANCE_DIVIDER.call();
     const expectedPayoutAmount = parseFloat(amount) + (parseFloat(amount)  / parseFloat(INSURANCE_DIVIDER) );
 
-    await config.flightSuretyApp.purchaseInsurance(
-        flight1.airline,
-        flight1.flight,
-        flight1.timestamp,
-        { from: passenger, value: amount }
+    await config.flightSuretyApp.purchaseInsurance(flight1.airline, flight1.flight, flight1.timestamp, { from: passenger, value: amount }
     );
 
     const insurance = await config.flightSuretyApp.getInsurance(flight1.flight, { from: passenger });
-
     assert.equal(parseFloat(insurance.payoutAmount), expectedPayoutAmount, "Insurance payout amount is incorrect");
 });
 
@@ -171,12 +153,7 @@ it('Passenger cannot buy more than 1 ether of insurance', async function () {
     let failed = false;
 
     try {
-        await config.flightSuretyApp.purchaseInsurance(
-            flight1.airline,
-            flight1.flight,
-            flight1.timestamp,
-            { from: passenger, value: amount }
-        );
+        await config.flightSuretyApp.purchaseInsurance(flight1.airline, flight1.flight, flight1.timestamp, { from: passenger, value: amount });
     } catch(err) {
         failed = true;
     }
@@ -187,14 +164,6 @@ it('Passenger cannot buy more than 1 ether of insurance', async function () {
 it('Passenger can check status of flight', async function () {
 
     const flight1 = await config.flightSuretyApp.getFlight(0);
-
-    const fetchFlightStatus = await config.flightSuretyApp.fetchFlightStatus(
-        flight1.airline,
-        flight1.flight,
-        flight1.timestamp,
-    );
-
-    truffleAssert.eventEmitted(fetchFlightStatus, 'OracleRequest', (ev) => {
-        return ev.airline === flight1.airline;
-    });
+    const fetchFlightStatus = await config.flightSuretyApp.fetchFlightStatus(flight1.airline, flight1.flight, flight1.timestamp, );
+    truffleAssert.eventEmitted(fetchFlightStatus, 'OracleRequest', (ev) => {return ev.airline === flight1.airline;});
 });
