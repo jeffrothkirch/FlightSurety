@@ -8,6 +8,10 @@ contract FlightSuretyData {
     bool private operational = true;
     mapping(address => bool) private authorizedCallers;
 
+    //mapping(address => Airline) public airlines;
+    //mapping(uint => Flight) private flights;
+    //mapping(bytes32 => uint) flightKeyToId;
+
     modifier requireIsOperational()
     {
         require(operational, "Contract is currently not operational");
